@@ -23,7 +23,6 @@ const Cart = (props) => {
     const deleteEntireCart = () => {
         deleteShoppingCart();
     }
-    
 
     return (
         <div className='cart'>

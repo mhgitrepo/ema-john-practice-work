@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb, getStoredCart } from '../../utilities/fakedb';
+import { addToDb, getStoredCart, removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
@@ -53,6 +53,11 @@ const Shop = () => {
         addToDb(selectedProduct.id);
     }
 
+     // delete entire cart
+     const deleteEntireCart = id => {
+        
+        removeFromDb(id);
+    }
 
 
     return (
@@ -67,6 +72,7 @@ const Shop = () => {
             <div className='order-summary'>
                 <Cart 
                 cart= {cart}
+                deleteCart = {deleteEntireCart}
                 ></Cart>
             </div>
         </div>
