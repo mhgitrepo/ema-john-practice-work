@@ -10,6 +10,7 @@ const Shop = () => {
     //calculate items
     const [cart, setCart] = useState([]);
 
+
     // get products
     useEffect(() => {
         fetch('products.json')
@@ -32,6 +33,7 @@ const Shop = () => {
         }
         setCart(saveCart);
     }, [products])
+    
 
     const addToCartHandler = (selectedProduct) => {
         //total items

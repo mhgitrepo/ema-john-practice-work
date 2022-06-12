@@ -4,8 +4,7 @@ import React from 'react';
 import { deleteShoppingCart } from '../../utilities/fakedb';
 import './Cart.css';
 
-const Cart = (props) => {
-    const {cart} = props;
+const Cart = ({cart}) => {
 
     let totalPrice = 0;
     let shipping = 0;
@@ -23,6 +22,7 @@ const Cart = (props) => {
     const deleteEntireCart = () => {
         deleteShoppingCart();
     }
+    
 
     return (
         <div className='cart'>
