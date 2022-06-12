@@ -1,0 +1,68 @@
+.shop-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.shop-container h2{
+    text-align: center;
+}
+
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 30px;
+    margin-top: 150px;
+}
+
+.order-summary{
+    background-color: #FFE0B3;
+    height: auto;
+}
+.order-summary h3 {
+    text-align: center;
+}
+.item-calculation{
+    margin-left: 50px;
+}
+.item-calculation p{
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
+}
+.grand-total{
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
+}
+.btn-in-order-summary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.btn-common{
+    width: 80%;
+    background-color: #FF3030;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+.btn-common:hover{
+    background-color: #fd0d0d;
+    transition: .3s;
+}
+#btn-review-order{
+    background-color: #ff9900d2;
+    transition: .3s;
+}
+#btn-review-order:hover{
+    background-color: #FF9900;
+    transition: .3s;
+}
+.btn-common p{
+    color: #fff;
+    font-size: 17px;
+}
+.fa-icon-o-s{
+    margin-left: 10px;
+}
