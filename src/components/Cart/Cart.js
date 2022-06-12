@@ -1,6 +1,7 @@
 import { faArrowRight, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { deleteShoppingCart } from '../../utilities/fakedb';
 import './Cart.css';
 
 const Cart = (props) => {
@@ -18,6 +19,12 @@ const Cart = (props) => {
     const tax = parseFloat((totalPrice * .008).toFixed(2));
     const grandTotal = totalPrice + shipping + tax;
 
+    // delete entire cart
+    const deleteEntireCart = () => {
+        deleteShoppingCart();
+    }
+    
+
     return (
         <div className='cart'>
             <h3>Order Summary</h3>
@@ -29,10 +36,10 @@ const Cart = (props) => {
                 <p className='grand-total'>Grand Total: ${grandTotal}</p>
             </div>
             <div className='btn-in-order-summary'>
-                <button className='btn-common'><p>Clear Cart
+                <button onClick={deleteEntireCart} className='btn-common'><p>Clear Cart
                 <FontAwesomeIcon className='fa-icon-o-s' icon={faTrashCan}></FontAwesomeIcon>
                 </p></button>
-                <button className='btn-common' id='btn-review-order'><p>Review Order
+                <button className='btn-common' id='btn-review-order' disabled><p>Review Order
                 <FontAwesomeIcon className='fa-icon-o-s' icon={faArrowRight}></FontAwesomeIcon>
                 </p></button>
             </div>

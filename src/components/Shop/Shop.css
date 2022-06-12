@@ -54,10 +54,7 @@
 #btn-review-order{
     background-color: #ff9900d2;
     transition: .3s;
-}
-#btn-review-order:hover{
-    background-color: #FF9900;
-    transition: .3s;
+    cursor:not-allowed;
 }
 .btn-common p{
     color: #fff;

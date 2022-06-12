@@ -35,7 +35,6 @@ const Shop = () => {
 
     const addToCartHandler = (selectedProduct) => {
         //total items
-        console.log(selectedProduct);
 
         let newCart = [];
         const exists = cart.find(product => product.id === selectedProduct.id);
@@ -53,6 +52,7 @@ const Shop = () => {
         //set shopping cart to local storage
         addToDb(selectedProduct.id);
     }
+
 
 
     return (
